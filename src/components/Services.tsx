@@ -3,7 +3,7 @@ import React from "react";
 import { 
   Building, 
   Truck, 
-  Crane, 
+  Construction as ConstructionCrane, 
   Warehouse, 
   Construction, 
   HardHat 
@@ -27,7 +27,7 @@ const Services = () => {
       title: "Heavy Equipment Operation",
       description:
         "Skilled operators and modern heavy equipment for all types of construction and earthmoving projects.",
-      icon: Crane,
+      icon: ConstructionCrane,
     },
     {
       title: "Material Supply Chain",

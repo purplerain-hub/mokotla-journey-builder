@@ -5,10 +5,10 @@ import { Award, Users, Calendar, Target } from "lucide-react";
 
 const About = () => {
   const statsData = [
-    { value: "15+", label: "Years Experience", icon: Calendar },
-    { value: "200+", label: "Projects Completed", icon: Target },
-    { value: "50+", label: "Team Members", icon: Users },
-    { value: "25+", label: "Industry Awards", icon: Award },
+    { value: "4", label: "Years Experience", icon: Calendar },
+    { value: "20+", label: "Projects Completed", icon: Target },
+    { value: "20+", label: "Team Members", icon: Users },
+    { value: "10+", label: "Industry Awards", icon: Award },
   ];
 
   const valuesData = [
@@ -51,9 +51,6 @@ const About = () => {
             <p className="text-gray-300 mb-6">
               Our integrated approach combines construction expertise with efficient logistics solutions, enabling us to deliver projects that meet and exceed client expectations. We take pride in our team of experienced professionals who bring passion and precision to every project.
             </p>
-            <Button className="bg-mokotla-yellow hover:bg-white text-mokotla-blue font-bold">
-              Learn More
-            </Button>
           </div>
           <div className="grid grid-cols-2 gap-6">
             {statsData.map((stat, index) => (
@@ -99,9 +96,9 @@ const About = () => {
           <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
             Whether you have a small renovation or a large-scale development, our team is ready to help you bring your project to life.
           </p>
-          <Button className="bg-mokotla-yellow hover:bg-white text-mokotla-blue font-bold px-8 py-3 text-lg">
-            Contact Us Today
-          </Button>
+          <p className="bg-mokotla-yellow hover:bg-white text-mokotla-blue font-bold px-8 py-3 text-lg">
+            Contact Us Today !!!
+          </p>
         </div>
       </div>
     </section>

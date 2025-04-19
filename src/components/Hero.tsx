@@ -47,7 +47,7 @@ const Hero = () => {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          access_key: "YOUR_WEB3FORMS_ACCESS_KEY", // You'll need to replace this
+          access_key: "3b30f00f-c8cd-4214-b736-711418478ed5", // You'll need to replace this
           from_name: formData.fullName,
           subject: "New Quote Request from Website",
           to: "james4mokotlagroup@outlook.com",

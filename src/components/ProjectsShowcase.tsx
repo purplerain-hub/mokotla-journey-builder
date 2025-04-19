@@ -58,9 +58,7 @@ const ProjectsShowcase = () => {
         </div>
 
         <div className="flex flex-wrap justify-center gap-2 mb-12">
-          {categories.map(category => <Button key={category} onClick={() => setFilter(category)} variant={filter === category ? "default" : "outline"} className={filter === category ? "bg-mokotla-blue hover:bg-mokotla-blue/90" : "border-mokotla-blue text-mokotla-blue hover:bg-mokotla-blue/10"}>
-              {category}
-            </Button>)}
+          {categories.map(category => {})}
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

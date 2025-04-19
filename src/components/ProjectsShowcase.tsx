@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
+
 interface Project {
   id: number;
   title: string;
@@ -7,6 +8,7 @@ interface Project {
   description: string;
   imageUrl: string;
 }
+
 const ProjectsShowcase = () => {
   const projectsData: Project[] = [{
     id: 1,
@@ -45,9 +47,12 @@ const ProjectsShowcase = () => {
     description: "Retail development featuring contemporary design and sustainable construction methods.",
     imageUrl: "https://images.unsplash.com/photo-1481437156560-3205f6a55735?auto=format&fit=crop&w=800&h=500"
   }];
+
   const [filter, setFilter] = useState("All");
   const categories = ["All", "Infrastructure", "Commercial", "Industrial", "Residential"];
+
   const filteredProjects = filter === "All" ? projectsData : projectsData.filter(project => project.category === filter);
+
   return <section id="projects" className="py-20 bg-white">
       <div className="container mx-auto">
         <div className="text-center mb-16">
@@ -58,7 +63,20 @@ const ProjectsShowcase = () => {
         </div>
 
         <div className="flex flex-wrap justify-center gap-2 mb-12">
-          {categories.map(category => {})}
+          {categories.map(category => (
+            <Button 
+              key={category} 
+              onClick={() => setFilter(category)}
+              variant={filter === category ? "default" : "outline"}
+              className={`
+                ${filter === category 
+                  ? "bg-mokotla-blue text-white" 
+                  : "bg-white text-mokotla-blue border border-mokotla-blue"}
+              `}
+            >
+              {category}
+            </Button>
+          ))}
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -87,4 +105,5 @@ const ProjectsShowcase = () => {
       </div>
     </section>;
 };
+
 export default ProjectsShowcase;

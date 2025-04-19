@@ -7,8 +7,8 @@
 @layer base {
   :root {
     --background: 0 100% 99%; /* Almost white */
-    --foreground: 0 50% 45%;      /* Light maroon */
-    --primary: 0 50% 45%;         /* Light maroon */
+    --foreground: 0 50% 35%;      /* Darker light maroon */
+    --primary: 0 50% 35%;         /* Darker light maroon */
     --primary-foreground: 0 0% 100%; /* White */
     --secondary: 0 0% 100%; /* White */
     --secondary-foreground: 0 50% 45%; /* Light maroon */
@@ -44,8 +44,8 @@
 
   .dark {
     --background: 222.2 84% 4.9%;
-    --foreground: 0 50% 50%;      /* Slightly brighter light maroon for dark mode */
-    --primary: 0 50% 50%;         /* Slightly brighter light maroon */
+    --foreground: 0 50% 40%;      /* Slightly darker maroon for dark mode */
+    --primary: 0 50% 40%;         /* Slightly darker maroon for dark mode */
     --primary-foreground: 0 0% 100%; /* White */
 
     --card: 222.2 84% 4.9%;

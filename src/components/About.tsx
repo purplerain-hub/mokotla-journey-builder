@@ -46,7 +46,7 @@ const About = () => {
           <div className="bg-white/10 backdrop-blur-sm p-8 rounded-lg">
             <h3 className="text-2xl font-bold text-white mb-4">Our Story</h3>
             <p className="text-gray-300 mb-4">
-              Founded in 2008, Mokotla began as a small construction company with big ambitions. Over the years, we've grown into a comprehensive construction and logistics enterprise, known for reliability and excellence across various sectors.
+              Founded in 2021, Mokotla began as a small construction company with big ambitions. Over the years, we've grown into a comprehensive construction and logistics enterprise, known for reliability and excellence across various sectors.
             </p>
             <p className="text-gray-300 mb-6">
               Our integrated approach combines construction expertise with efficient logistics solutions, enabling us to deliver projects that meet and exceed client expectations. We take pride in our team of experienced professionals who bring passion and precision to every project.

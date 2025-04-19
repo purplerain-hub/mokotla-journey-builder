@@ -1,9 +1,85 @@
-
-import React from "react";
+import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ChevronRight } from "lucide-react";
+import { toast } from "@/components/ui/sonner";
 
 const Hero = () => {
+  const [formData, setFormData] = useState({
+    fullName: '',
+    email: '',
+    phone: '',
+    projectDetails: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    // Validate form
+    if (!formData.fullName || !formData.email || !formData.phone) {
+      toast.error("Please fill in all required fields");
+      setIsSubmitting(false);
+      return;
+    }
+
+    // Basic email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(formData.email)) {
+      toast.error("Please enter a valid email address");
+      setIsSubmitting(false);
+      return;
+    }
+
+    try {
+      // Send form data using no-cors to avoid CORS issues
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          access_key: "YOUR_WEB3FORMS_ACCESS_KEY", // You'll need to replace this
+          from_name: formData.fullName,
+          subject: "New Quote Request from Website",
+          to: "james4mokotlagroup@outlook.com",
+          message: `
+            Name: ${formData.fullName}
+            Email: ${formData.email}
+            Phone: ${formData.phone}
+            Project Details: ${formData.projectDetails}
+          `
+        }),
+      });
+
+      if (response.ok) {
+        toast.success("Request submitted successfully!");
+        // Reset form
+        setFormData({
+          fullName: '',
+          email: '',
+          phone: '',
+          projectDetails: ''
+        });
+      } else {
+        throw new Error("Failed to submit form");
+      }
+    } catch (error) {
+      toast.error("Failed to submit request. Please try again later.");
+      console.error("Form submission error:", error);
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <section
       id="home"
@@ -45,34 +121,53 @@ const Hero = () => {
             </div>
           </div>
           <div className="hidden md:block">
-            <div className="bg-white/10 backdrop-blur-sm p-8 rounded-lg shadow-2xl animate-fade-up">
+            <form onSubmit={handleSubmit} className="bg-white/10 backdrop-blur-sm p-8 rounded-lg shadow-2xl animate-fade-up">
               <h3 className="text-2xl font-bold text-white mb-4">Get a Free Quote</h3>
               <div className="space-y-4">
                 <input
                   type="text"
+                  name="fullName"
+                  value={formData.fullName}
+                  onChange={handleInputChange}
                   placeholder="Full Name"
                   className="w-full px-4 py-3 bg-white/20 placeholder-white/70 text-white rounded border border-white/30 focus:outline-none focus:ring-2 focus:ring-mokotla-yellow"
+                  required
                 />
                 <input
                   type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleInputChange}
                   placeholder="Email Address"
                   className="w-full px-4 py-3 bg-white/20 placeholder-white/70 text-white rounded border border-white/30 focus:outline-none focus:ring-2 focus:ring-mokotla-yellow"
+                  required
                 />
                 <input
                   type="tel"
+                  name="phone"
+                  value={formData.phone}
+                  onChange={handleInputChange}
                   placeholder="Phone Number"
                   className="w-full px-4 py-3 bg-white/20 placeholder-white/70 text-white rounded border border-white/30 focus:outline-none focus:ring-2 focus:ring-mokotla-yellow"
+                  required
                 />
                 <textarea
+                  name="projectDetails"
+                  value={formData.projectDetails}
+                  onChange={handleInputChange}
                   placeholder="Project Details"
                   rows={3}
                   className="w-full px-4 py-3 bg-white/20 placeholder-white/70 text-white rounded border border-white/30 focus:outline-none focus:ring-2 focus:ring-mokotla-yellow"
                 ></textarea>
-                <Button className="w-full bg-mokotla-yellow hover:bg-white hover:text-mokotla-blue text-mokotla-blue font-bold py-3">
-                  Submit Request
+                <Button 
+                  type="submit"
+                  disabled={isSubmitting}
+                  className="w-full bg-mokotla-yellow hover:bg-white hover:text-mokotla-blue text-mokotla-blue font-bold py-3"
+                >
+                  {isSubmitting ? "Submitting..." : "Submit Request"}
                 </Button>
               </div>
-            </div>
+            </form>
           </div>
         </div>
       </div>

@@ -63,7 +63,7 @@ export default {
           ring: 'hsl(var(--sidebar-ring))'
         },
         mokotla: {
-          blue: '#8B0000',
+          blue: '#B22222',
           yellow: '#fff',
           gray: '#4A5568',
           lightgray: '#F7FAFC'

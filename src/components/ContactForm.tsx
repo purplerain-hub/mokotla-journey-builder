@@ -13,7 +13,7 @@ const ContactForm = () => {
   }, {
     icon: MapPin,
     title: "Location",
-    details: ["123 Construction Ave, Building City, BC 12345"]
+    details: ["106 Weirda Road, Sandown, 2196"]
   }, {
     icon: Clock,
     title: "Business Hours",

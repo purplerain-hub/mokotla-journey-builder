@@ -7,12 +7,12 @@
 @layer base {
   :root {
     --background: 0 100% 99%; /* Almost white */
-    --foreground: 351 100% 45%; /* Red */
-    --primary: 351 100% 45%; /* Red */
+    --foreground: 0 70% 35%;      /* Maroon red */
+    --primary: 0 70% 35%;         /* Maroon red */
     --primary-foreground: 0 0% 100%; /* White */
     --secondary: 0 0% 100%; /* White */
-    --secondary-foreground: 351 100% 45%; /* Red */
-    --accent: 351 100% 45%; /* Red */
+    --secondary-foreground: 0 70% 35%; /* Maroon red */
+    --accent: 0 70% 35%; /* Maroon red */
     --accent-foreground: 0 0% 100%; /* White */
     --card: 0 0% 100%;
     --card-foreground: 222.2 84% 4.9%;
@@ -44,7 +44,9 @@
 
   .dark {
     --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    --foreground: 0 70% 45%;      /* Slightly brighter maroon for dark mode */
+    --primary: 0 70% 45%;         /* Slightly brighter maroon */
+    --primary-foreground: 0 0% 100%; /* White */
 
     --card: 222.2 84% 4.9%;
     --card-foreground: 210 40% 98%;

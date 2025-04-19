@@ -63,10 +63,10 @@ export default {
           ring: 'hsl(var(--sidebar-ring))'
         },
         mokotla: {
-          blue: '#ea384c',
+          blue: '#8B0000',
           yellow: '#fff',
           gray: '#4A5568',
-          lightgray: '#F7FAFC',
+          lightgray: '#F7FAFC'
         }
       },
       borderRadius: {

@@ -5,15 +5,15 @@ const ContactForm = () => {
   const contactInfo = [{
     icon: Phone,
     title: "Phone",
-    details: ["+27 (0) 12 345 6789", "+27 (0) 87 654 3210"]
+    details: ["+27 (0) 71 449 8555", "+27 (0) 79 074 9942"]
   }, {
     icon: Mail,
     title: "Email",
-    details: ["info@mokotla.com", "projects@mokotla.com"]
+    details: ["james4mokotlagroup@gmail.com", "mokotlagroup4@gmail.com.com"]
   }, {
     icon: MapPin,
     title: "Location",
-    details: ["123 Construction Avenue", "Johannesburg, South Africa, 2000"]
+    details: ["123 Construction Ave, Building City, BC 12345"]
   }, {
     icon: Clock,
     title: "Business Hours",

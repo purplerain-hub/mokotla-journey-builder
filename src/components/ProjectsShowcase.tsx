@@ -15,37 +15,37 @@ const ProjectsShowcase = () => {
     title: "Highway Infrastructure Expansion",
     category: "Infrastructure",
     description: "A major highway expansion project improving connectivity and reducing congestion.",
-    imageUrl: "/lovable-uploads/9fb53d8a-4dec-4b84-967a-789cb7a9c6e3.png"
+    imageUrl: "https://images.unsplash.com/photo-1488972685288-c3fd157d7c7a?auto=format&fit=crop&w=800&h=500"
   }, {
     id: 2,
     title: "Commercial Office Complex",
     category: "Commercial",
     description: "Modern office complex with sustainable design features and state-of-the-art facilities.",
-    imageUrl: "/lovable-uploads/9fb53d8a-4dec-4b84-967a-789cb7a9c6e3.png"
+    imageUrl: "https://images.unsplash.com/photo-1486718448742-163732cd1544?auto=format&fit=crop&w=800&h=500"
   }, {
     id: 3,
     title: "Industrial Warehouse Development",
     category: "Industrial",
     description: "Large-scale warehouse development with advanced logistics infrastructure.",
-    imageUrl: "/lovable-uploads/9fb53d8a-4dec-4b84-967a-789cb7a9c6e3.png"
+    imageUrl: "https://images.unsplash.com/photo-1497604401993-f2e922e5cb0a?auto=format&fit=crop&w=800&h=500"
   }, {
     id: 4,
     title: "Residential Housing Community",
     category: "Residential",
     description: "Comprehensive residential development with modern amenities and green spaces.",
-    imageUrl: "/lovable-uploads/9fb53d8a-4dec-4b84-967a-789cb7a9c6e3.png"
+    imageUrl: "https://images.unsplash.com/photo-1449157291145-7efd050a4d0e?auto=format&fit=crop&w=800&h=500"
   }, {
     id: 5,
     title: "Bridge Reconstruction Project",
     category: "Infrastructure",
     description: "Critical bridge reconstruction improving safety and increasing capacity.",
-    imageUrl: "/lovable-uploads/9fb53d8a-4dec-4b84-967a-789cb7a9c6e3.png"
+    imageUrl: "https://images.unsplash.com/photo-1460574283810-2aab119d8511?auto=format&fit=crop&w=800&h=500"
   }, {
     id: 6,
     title: "Shopping Mall Construction",
     category: "Commercial",
     description: "Retail development featuring contemporary design and sustainable construction methods.",
-    imageUrl: "/lovable-uploads/9fb53d8a-4dec-4b84-967a-789cb7a9c6e3.png"
+    imageUrl: "https://images.unsplash.com/photo-1496307653780-42ee777d4833?auto=format&fit=crop&w=800&h=500"
   }];
 
   const [filter, setFilter] = useState("All");

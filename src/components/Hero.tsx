@@ -93,6 +93,16 @@ const Hero = () => {
         }}
       ></div>
 
+      {/* Hero image - right side */}
+      <div className="absolute right-0 top-0 w-1/2 h-full z-0">
+        <img
+          src="/lovable-uploads/9fb53d8a-4dec-4b84-967a-789cb7a9c6e3.png"
+          alt="Mokotla Construction Worker"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-l from-transparent to-mokotla-blue/90"></div>
+      </div>
+
       <div className="container relative z-10">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="text-white animate-fade-in">

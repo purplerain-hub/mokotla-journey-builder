@@ -15,37 +15,37 @@ const ProjectsShowcase = () => {
     title: "Highway Infrastructure Expansion",
     category: "Infrastructure",
     description: "A major highway expansion project improving connectivity and reducing congestion.",
-    imageUrl: "https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=800&h=500"
+    imageUrl: "/lovable-uploads/9fb53d8a-4dec-4b84-967a-789cb7a9c6e3.png"
   }, {
     id: 2,
     title: "Commercial Office Complex",
     category: "Commercial",
     description: "Modern office complex with sustainable design features and state-of-the-art facilities.",
-    imageUrl: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&h=500"
+    imageUrl: "/lovable-uploads/9fb53d8a-4dec-4b84-967a-789cb7a9c6e3.png"
   }, {
     id: 3,
     title: "Industrial Warehouse Development",
     category: "Industrial",
     description: "Large-scale warehouse development with advanced logistics infrastructure.",
-    imageUrl: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&h=500"
+    imageUrl: "/lovable-uploads/9fb53d8a-4dec-4b84-967a-789cb7a9c6e3.png"
   }, {
     id: 4,
     title: "Residential Housing Community",
     category: "Residential",
     description: "Comprehensive residential development with modern amenities and green spaces.",
-    imageUrl: "https://images.unsplash.com/photo-1494891848038-7bd202a2afeb?auto=format&fit=crop&w=800&h=500"
+    imageUrl: "/lovable-uploads/9fb53d8a-4dec-4b84-967a-789cb7a9c6e3.png"
   }, {
     id: 5,
     title: "Bridge Reconstruction Project",
     category: "Infrastructure",
     description: "Critical bridge reconstruction improving safety and increasing capacity.",
-    imageUrl: "https://images.unsplash.com/photo-1433086966358-54859d0ed716?auto=format&fit=crop&w=800&h=500"
+    imageUrl: "/lovable-uploads/9fb53d8a-4dec-4b84-967a-789cb7a9c6e3.png"
   }, {
     id: 6,
     title: "Shopping Mall Construction",
     category: "Commercial",
     description: "Retail development featuring contemporary design and sustainable construction methods.",
-    imageUrl: "https://images.unsplash.com/photo-1481437156560-3205f6a55735?auto=format&fit=crop&w=800&h=500"
+    imageUrl: "/lovable-uploads/9fb53d8a-4dec-4b84-967a-789cb7a9c6e3.png"
   }];
 
   const [filter, setFilter] = useState("All");
@@ -80,9 +80,14 @@ const ProjectsShowcase = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredProjects.map(project => <div key={project.id} className="project-card bg-white rounded-lg overflow-hidden shadow-md">
+          {filteredProjects.map(project => (
+            <div key={project.id} className="project-card bg-white rounded-lg overflow-hidden shadow-md">
               <div className="relative h-64 overflow-hidden">
-                
+                <img
+                  src={project.imageUrl}
+                  alt={project.title}
+                  className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                />
                 <div className="absolute top-4 right-4 bg-mokotla-yellow text-mokotla-blue font-semibold px-3 py-1 rounded-full text-sm">
                   {project.category}
                 </div>
@@ -92,9 +97,9 @@ const ProjectsShowcase = () => {
                   {project.title}
                 </h3>
                 <p className="text-mokotla-gray mb-4">{project.description}</p>
-                
               </div>
-            </div>)}
+            </div>
+          ))}
         </div>
 
         <div className="text-center mt-12">
